@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php session_start(); 
+
+if(!isset($_SESSION['access'])) die("Вы не Админ");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +14,8 @@
 <body>
 <?php 
 
-    var_dump($_SESSION['mySettings']) ;
+    echo "Страница Админки";
+
 ?>    
 </body>
 </html>
